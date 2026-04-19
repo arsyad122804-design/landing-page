@@ -80,15 +80,21 @@ body {
   transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--white); }
-.btn-nav {
-  background: var(--gradient) !important;
+.btn-talk {
   color: var(--white) !important;
-  padding: 10px 22px;
-  border-radius: 50px;
+  padding: 12px 28px;
+  border-radius: 12px;
   font-weight: 600 !important;
-  transition: opacity 0.2s, transform 0.2s !important;
+  font-size: 0.95rem;
+  border: 1.5px solid rgba(255,255,255,0.3);
+  background: transparent;
+  transition: border-color 0.2s, background 0.2s !important;
+  letter-spacing: 0.2px;
 }
-.btn-nav:hover { opacity: 0.9; transform: translateY(-1px); }
+.btn-talk:hover {
+  border-color: rgba(255,255,255,0.7) !important;
+  background: rgba(255,255,255,0.05) !important;
+}
 .hamburger {
   display: none;
   background: none;
@@ -125,7 +131,8 @@ body {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 620px;
+  max-width: 100%;
+  padding-right: 480px;
 }
 .hero-badge {
   display: inline-flex;
@@ -142,10 +149,10 @@ body {
   animation: fadeInDown 0.6s ease;
 }
 .hero-title {
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-size: clamp(2.8rem, 6vw, 5rem);
   font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: -1.5px;
+  line-height: 1.05;
+  letter-spacing: -2px;
   margin-bottom: 20px;
   animation: fadeInUp 0.7s ease 0.1s both;
 }
@@ -645,3 +652,54 @@ section { padding: 100px 0; }
   transition: transform 0.2s, opacity 0.2s;
 }
 .btn-wa-big:hover { transform: translateY(-2px); opacity: 0.92; }
+
+/* ── DOKUMENTASI ── */
+.dokumentasi { background: var(--dark2); }
+.dok-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.dok-card {
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  border: 1px solid rgba(255,255,255,0.07);
+  transition: transform 0.3s, border-color 0.3s;
+}
+.dok-card:hover {
+  transform: scale(1.02);
+  border-color: rgba(14,165,233,0.4);
+}
+.dok-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.dok-placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--dark3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+.dok-icon { font-size: 2rem; opacity: 0.4; }
+
+@media (max-width: 768px) {
+  .dok-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── COVERAGE MAP ── */
+.coverage { background: var(--dark); padding: 60px 0; }
+.coverage-wrap {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
