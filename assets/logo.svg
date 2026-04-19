@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" fill="none">
+  <defs>
+    <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+  <!-- Camera icon -->
+  <circle cx="25" cy="25" r="20" fill="#0ea5e9" fill-opacity="0.12" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.4"/>
+  <circle cx="25" cy="25" r="10" fill="url(#logoGrad)" opacity="0.9"/>
+  <circle cx="25" cy="25" r="5" fill="#0a0f1e"/>
+  <circle cx="25" cy="25" r="2.5" fill="#0ea5e9"/>
+  <!-- IR dots -->
+  <circle cx="38" cy="18" r="2.5" fill="#ef4444" opacity="0.8"/>
+  <circle cx="38" cy="25" r="2.5" fill="#ef4444" opacity="0.6"/>
+  <circle cx="38" cy="32" r="2.5" fill="#ef4444" opacity="0.8"/>
+  <!-- Text -->
+  <text x="52" y="20" font-family="Inter, sans-serif" font-weight="900" font-size="16" fill="white" letter-spacing="-0.5">CCTV</text>
+  <text x="52" y="38" font-family="Inter, sans-serif" font-weight="700" font-size="14" fill="url(#logoGrad)" letter-spacing="2">SOLO</text>
+</svg>

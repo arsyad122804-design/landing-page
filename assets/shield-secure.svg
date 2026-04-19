@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 180" fill="none">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <filter id="shieldGlow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer glow -->
+  <path d="M80 10 L148 38 L148 95 C148 132 80 168 80 168 C80 168 12 132 12 95 L12 38 Z"
+        fill="#0ea5e9" fill-opacity="0.08" filter="url(#shieldGlow)"/>
+
+  <!-- Shield body -->
+  <path d="M80 18 L140 43 L140 95 C140 128 80 160 80 160 C80 160 20 128 20 95 L20 43 Z"
+        fill="url(#shieldGrad)" fill-opacity="0.15" stroke="url(#shieldGrad)" stroke-width="2"/>
+
+  <!-- Inner shield -->
+  <path d="M80 30 L128 51 L128 95 C128 122 80 148 80 148 C80 148 32 122 32 95 L32 51 Z"
+        fill="#0a0f1e" stroke="#0ea5e9" stroke-width="1" stroke-opacity="0.3"/>
+
+  <!-- Lock icon -->
+  <rect x="62" y="88" width="36" height="28" rx="6" fill="url(#shieldGrad)" opacity="0.9"/>
+  <path d="M70 88 L70 80 C70 71.2 90 71.2 90 80 L90 88" stroke="#0ea5e9" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <circle cx="80" cy="102" r="5" fill="white" opacity="0.9"/>
+  <rect x="78.5" y="102" width="3" height="7" rx="1.5" fill="white" opacity="0.9"/>
+
+  <!-- Checkmark ring -->
+  <circle cx="80" cy="55" r="16" fill="#0ea5e9" fill-opacity="0.1" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.4"/>
+  <path d="M72 55 L77 61 L89 49" stroke="#0ea5e9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Decorative dots -->
+  <circle cx="36" cy="70" r="3" fill="#0ea5e9" opacity="0.4"/>
+  <circle cx="124" cy="70" r="3" fill="#0ea5e9" opacity="0.4"/>
+  <circle cx="30" cy="100" r="2" fill="#6366f1" opacity="0.4"/>
+  <circle cx="130" cy="100" r="2" fill="#6366f1" opacity="0.4"/>
+</svg>

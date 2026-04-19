@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 380" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="cam" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="lens" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="lensGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background glow -->
+  <ellipse cx="260" cy="190" rx="200" ry="160" fill="url(#bg)"/>
+
+  <!-- Monitor / Screen -->
+  <rect x="80" y="60" width="360" height="240" rx="18" fill="url(#cam)" stroke="#1e3a5f" stroke-width="2"/>
+  <rect x="92" y="72" width="336" height="216" rx="12" fill="#060d1a"/>
+
+  <!-- Grid lines on screen -->
+  <line x1="92" y1="144" x2="428" y2="144" stroke="#0ea5e9" stroke-opacity="0.08" stroke-width="1"/>
+  <line x1="92" y1="216" x2="428" y2="216" stroke="#0ea5e9" stroke-opacity="0.08" stroke-width="1"/>
+  <line x1="204" y1="72" x2="204" y2="288" stroke="#0ea5e9" stroke-opacity="0.08" stroke-width="1"/>
+  <line x1="316" y1="72" x2="316" y2="288" stroke="#0ea5e9" stroke-opacity="0.08" stroke-width="1"/>
+
+  <!-- Camera feed zones -->
+  <rect x="100" y="80" width="100" height="58" rx="6" fill="#0a1628"/>
+  <rect x="208" y="80" width="100" height="58" rx="6" fill="#0d1f35"/>
+  <rect x="316" y="80" width="104" height="58" rx="6" fill="#0a1628"/>
+  <rect x="100" y="146" width="100" height="58" rx="6" fill="#0d1f35"/>
+  <rect x="208" y="146" width="100" height="58" rx="6" fill="#0a1628"/>
+  <rect x="316" y="146" width="104" height="58" rx="6" fill="#0d1f35"/>
+
+  <!-- Camera icons in each zone -->
+  <text x="150" y="115" text-anchor="middle" font-size="20" fill="#0ea5e9" opacity="0.4">📷</text>
+  <text x="258" y="115" text-anchor="middle" font-size="20" fill="#0ea5e9" opacity="0.4">📷</text>
+  <text x="368" y="115" text-anchor="middle" font-size="20" fill="#0ea5e9" opacity="0.4">📷</text>
+  <text x="150" y="181" text-anchor="middle" font-size="20" fill="#0ea5e9" opacity="0.4">📷</text>
+  <text x="258" y="181" text-anchor="middle" font-size="20" fill="#0ea5e9" opacity="0.4">📷</text>
+  <text x="368" y="181" text-anchor="middle" font-size="20" fill="#0ea5e9" opacity="0.4">📷</text>
+
+  <!-- Active camera highlight -->
+  <rect x="208" y="80" width="100" height="58" rx="6" fill="none" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.6"/>
+  <circle cx="308" cy="84" r="4" fill="#ef4444"/>
+  <text x="215" y="92" font-size="7" fill="#ef4444" font-family="monospace" font-weight="bold">● REC</text>
+
+  <!-- Bottom status bar -->
+  <rect x="92" y="212" width="336" height="36" rx="0" fill="#060d1a"/>
+  <rect x="92" y="212" width="336" height="1" fill="#0ea5e9" fill-opacity="0.2"/>
+  <circle cx="110" cy="230" r="5" fill="#22c55e"/>
+  <text x="122" y="234" font-size="9" fill="#22c55e" font-family="monospace">6 CAM ACTIVE</text>
+  <text x="340" y="234" font-size="9" fill="#64748b" font-family="monospace">19:42:07</text>
+
+  <!-- Monitor stand -->
+  <rect x="230" y="300" width="60" height="12" rx="4" fill="#1e293b"/>
+  <rect x="200" y="312" width="120" height="8" rx="4" fill="#1e293b"/>
+
+  <!-- CCTV Camera device (right side) -->
+  <g transform="translate(370, 130)">
+    <!-- Camera body -->
+    <rect x="0" y="10" width="80" height="32" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <!-- Lens housing -->
+    <circle cx="16" cy="26" r="14" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+    <circle cx="16" cy="26" r="10" fill="url(#lens)" opacity="0.8"/>
+    <circle cx="16" cy="26" r="6" fill="#0a0f1e"/>
+    <circle cx="16" cy="26" r="3" fill="#0ea5e9" opacity="0.9" filter="url(#glow)"/>
+    <!-- IR LEDs -->
+    <circle cx="36" cy="18" r="3" fill="#ef4444" opacity="0.7"/>
+    <circle cx="46" cy="18" r="3" fill="#ef4444" opacity="0.7"/>
+    <circle cx="56" cy="18" r="3" fill="#ef4444" opacity="0.7"/>
+    <circle cx="36" cy="34" r="3" fill="#ef4444" opacity="0.7"/>
+    <circle cx="46" cy="34" r="3" fill="#ef4444" opacity="0.7"/>
+    <circle cx="56" cy="34" r="3" fill="#ef4444" opacity="0.7"/>
+    <!-- Mount bracket -->
+    <rect x="70" y="20" width="20" height="12" rx="3" fill="#334155"/>
+    <rect x="85" y="15" width="8" height="22" rx="3" fill="#475569"/>
+  </g>
+
+  <!-- Scan line animation hint -->
+  <rect x="92" y="72" width="336" height="2" rx="1" fill="#0ea5e9" fill-opacity="0.15"/>
+
+  <!-- Corner brackets (HUD style) -->
+  <path d="M100 80 L100 92 M100 80 L112 80" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.5"/>
+  <path d="M420 80 L420 92 M420 80 L408 80" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.5"/>
+  <path d="M100 288 L100 276 M100 288 L112 288" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.5"/>
+  <path d="M420 288 L420 276 M420 288 L408 288" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.5"/>
+</svg>
