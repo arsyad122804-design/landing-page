@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 60" fill="none">
+  <rect x="4" y="8" width="32" height="44" rx="4" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+  <text x="12" y="38" font-family="Inter,sans-serif" font-weight="900" font-size="22" fill="white">iD</text>
+  <text x="44" y="30" font-family="Inter,sans-serif" font-weight="900" font-size="20" fill="white" letter-spacing="2">EXPRESS</text>
+  <text x="44" y="46" font-family="Inter,sans-serif" font-weight="400" font-size="8" fill="rgba(255,255,255,0.45)" letter-spacing="0.5">DELIVERY PARTNER SOLO</text>
+</svg>

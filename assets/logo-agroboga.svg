@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 60" fill="none">
+  <circle cx="28" cy="30" r="22" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+  <path d="M18 30 Q28 14 38 30 Q28 46 18 30Z" fill="rgba(255,255,255,0.6)"/>
+  <circle cx="28" cy="30" r="8" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+  <text x="58" y="28" font-family="Georgia,serif" font-weight="700" font-size="13" fill="white" letter-spacing="0.5">AGRO BOGA</text>
+  <text x="58" y="44" font-family="Georgia,serif" font-weight="700" font-size="13" fill="white" letter-spacing="0.5">UTAMA</text>
+  <text x="58" y="56" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,0.4)" font-style="italic">Your Trusted Partner in Food Service</text>
+</svg>

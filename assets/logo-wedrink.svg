@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 60" fill="none">
+  <circle cx="22" cy="30" r="18" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+  <text x="16" y="35" font-family="Inter,sans-serif" font-weight="900" font-size="14" fill="white">☕</text>
+  <text x="48" y="36" font-family="Inter,sans-serif" font-weight="900" font-size="20" fill="white" letter-spacing="1">WEDRINK</text>
+</svg>

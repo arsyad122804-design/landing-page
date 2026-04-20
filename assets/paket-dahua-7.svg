@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" fill="none">
+  <rect width="400" height="280" fill="#0ea5e9"/>
+  <rect x="210" y="-40" width="160" height="160" rx="16" fill="#0284c7" transform="rotate(45 290 40)"/>
+  <rect x="250" y="120" width="120" height="120" rx="12" fill="#22d3ee" opacity="0.4" transform="rotate(45 310 180)"/>
+  <rect x="-20" y="160" width="100" height="100" rx="10" fill="#8b5cf6" opacity="0.6" transform="rotate(45 30 210)"/>
+  <rect x="12" y="12" width="80" height="22" rx="4" fill="white" fill-opacity="0.9"/>
+  <text x="52" y="27" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="10" fill="#0ea5e9">CCTV SOLO</text>
+  <text x="16" y="72" font-family="Inter,sans-serif" font-weight="600" font-size="13" fill="white">PAKET CCTV</text>
+  <text x="16" y="96" font-family="Inter,sans-serif" font-weight="900" font-size="22" fill="white">7 KAMERA</text>
+  <text x="16" y="122" font-family="Inter,sans-serif" font-weight="900" font-size="28" fill="white" letter-spacing="-1">DAHUA</text>
+  <rect x="16" y="134" width="110" height="24" rx="4" fill="#8b5cf6"/>
+  <text x="71" y="150" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="11" fill="white">IDR 6.500.000</text>
+  <text x="16" y="178" font-family="Inter,sans-serif" font-weight="700" font-size="9" fill="white" opacity="0.9">DAPATKAN</text>
+  <text x="16" y="190" font-family="Inter,sans-serif" font-weight="700" font-size="9" fill="white" opacity="0.9">GARANSI PRODUK</text>
+  <text x="16" y="202" font-family="Inter,sans-serif" font-weight="700" font-size="9" fill="white" opacity="0.9">&amp; MAINTENANCE</text>
+  <text x="16" y="214" font-family="Inter,sans-serif" font-weight="700" font-size="9" fill="#f59e0b">GRATIS</text>
+  <circle cx="310" cy="120" r="28" fill="white" fill-opacity="0.15"/>
+  <text x="310" y="128" text-anchor="middle" font-size="22" fill="white">📷</text>
+  <text x="360" y="90" text-anchor="middle" font-size="16" fill="white" opacity="0.7">📷</text>
+  <text x="360" y="155" text-anchor="middle" font-size="16" fill="white" opacity="0.7">📷</text>
+  <rect x="0" y="248" width="400" height="32" fill="rgba(0,0,0,0.25)"/>
+  <text x="200" y="268" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="white" opacity="0.9">0882005479994 | cctvsolo.com</text>
+</svg>

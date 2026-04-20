@@ -552,18 +552,66 @@ section { padding: 100px 0; }
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
   .hero-visual { display: none; }
+  .hero-content { max-width: 100%; padding-right: 0; }
   .keunggulan-inner { grid-template-columns: 1fr; gap: 48px; }
   .kontak-inner { grid-template-columns: 1fr; gap: 48px; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
+  .paket-inner { grid-template-columns: 1fr; gap: 32px; }
+  .paket-inner.reverse { direction: ltr; }
 }
 @media (max-width: 768px) {
+  /* Navbar */
   .nav-links { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; right: 0; background: rgba(10,15,30,0.98); padding: 24px; gap: 20px; border-bottom: 1px solid rgba(255,255,255,0.08); }
   .nav-links.open { display: flex; }
   .hamburger { display: block; }
-  .hero-stats { gap: 16px; }
+
+  /* Hero */
+  .hero { padding: 100px 0 60px; }
+  .hero-title { font-size: 2.2rem; letter-spacing: -1px; }
+  .hero-desc { font-size: 0.95rem; }
+  .hero-cta { flex-direction: column; }
+  .hero-cta a { text-align: center; }
+  .hero-stats { gap: 12px; }
+  .stat-num { font-size: 1.4rem; }
+
+  /* Layanan */
+  .layanan-grid { grid-template-columns: 1fr; }
+
+  /* Produk */
+  .produk-grid { grid-template-columns: 1fr; }
   .produk-card.premium { transform: scale(1); }
-  .footer-inner { grid-template-columns: 1fr; }
+  .produk-header { flex-wrap: wrap; }
+  .produk-price-wrap { margin-left: 0; align-items: flex-start; }
+
+  /* Paket */
+  .paket-inner { grid-template-columns: 1fr; gap: 28px; }
+  .paket-inner.reverse { direction: ltr; }
+  .paket-visual { order: -1; }
+  .harga-promo { font-size: 1.4rem; }
+
+  /* Porto */
+  .porto-grid { grid-template-columns: 1fr; }
+
+  /* Keunggulan */
+  .keunggulan-inner { grid-template-columns: 1fr; }
   .badge-card { display: none; }
+
+  /* Kontak */
+  .kontak-inner { grid-template-columns: 1fr; }
+
+  /* Dok */
+  .dok-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Footer */
+  .footer-inner { grid-template-columns: 1fr; }
+
+  /* Kenapa */
+  .kenapa-grid { flex-direction: column; gap: 16px; align-items: flex-start; }
+  .kenapa-box { padding: 28px 20px; }
+
+  /* WA Float */
+  .wa-float span { display: none; }
+  .wa-float { padding: 14px; border-radius: 50%; }
 }
 
 /* ── PRODUK UPDATE ── */
@@ -692,9 +740,7 @@ section { padding: 100px 0; }
 }
 .dok-icon { font-size: 2rem; opacity: 0.4; }
 
-@media (max-width: 768px) {
-  .dok-grid { grid-template-columns: repeat(2, 1fr); }
-}
+
 
 /* ── COVERAGE MAP ── */
 .coverage { background: var(--dark); padding: 60px 0; }
@@ -768,23 +814,25 @@ section { padding: 100px 0; }
 }
 
 /* ── PORTO INTRO ── */
-.porto-intro { background: var(--dark2); padding: 80px 0; }
-.porto-title { font-size: 2rem; font-weight: 800; text-align: center; margin-bottom: 40px; }
-.porto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 800px; margin: 0 auto; }
+.porto-intro { background: var(--white); padding: 80px 0; }
+.porto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 900px; margin: 0 auto; }
 .porto-card {
-  background: var(--dark3);
-  border: 1px solid rgba(255,255,255,0.07);
+  background: var(--white);
+  border: 1px solid #e2e8f0;
   border-radius: 16px;
-  padding: 36px 28px;
-  text-align: center;
-  transition: transform 0.3s, border-color 0.3s;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-.porto-card:hover { transform: translateY(-4px); border-color: rgba(14,165,233,0.3); }
-.porto-icon { font-size: 2.5rem; margin-bottom: 16px; }
-.porto-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; }
-.porto-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; }
-.porto-link { color: var(--primary); font-weight: 600; text-decoration: none; font-size: 0.9rem; }
-.porto-link:hover { text-decoration: underline; }
+.porto-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.14); }
+.porto-card-img img { width: 100%; display: block; aspect-ratio: 4/3; object-fit: cover; }
+.porto-card-body { padding: 20px 24px 24px; }
+.porto-card-body h3 { font-size: 1rem; font-weight: 700; color: #1e293b; margin-bottom: 8px; }
+.porto-card-body p { font-size: 0.85rem; color: #64748b; line-height: 1.6; }
+
+@media (max-width: 768px) {
+  .porto-grid { grid-template-columns: 1fr; }
+}
 
 /* ── PAKET SECTION ── */
 .paket-section { padding: 80px 0; background: var(--dark); }
@@ -848,8 +896,177 @@ section { padding: 100px 0; }
   box-shadow: 0 20px 50px rgba(0,0,0,0.4);
 }
 
+
+
+
+/* ── NAVBAR LOGO WRAP ── */
+.logo-wrap { display: flex; flex-direction: column; gap: 2px; }
+.logo-sub { font-size: 0.72rem; color: var(--text-muted); font-weight: 400; margin-top: 2px; }
+
+/* ── HERO 2 KOLOM ── */
+.hero-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+  padding: 100px 24px 60px;
+  position: relative;
+  z-index: 2;
+}
+.hero-left img.hero-image {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+.hero-right .hero-title {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+.hero-right .hero-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 12px;
+  max-width: 100%;
+}
+.hero-keywords {
+  font-size: 0.78rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+.btn-beli-hero {
+  display: inline-block;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #000;
+  font-weight: 800;
+  font-size: 1.1rem;
+  padding: 16px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 8px 30px rgba(245,158,11,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 36px;
+  display: inline-block;
+}
+.btn-beli-hero:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(245,158,11,0.55); }
+.hero-stats {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.stat-box {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 16px 24px;
+  text-align: center;
+  min-width: 100px;
+}
+.stat-box .stat-num { display: block; font-size: 1.6rem; font-weight: 900; color: var(--white); }
+.stat-box .stat-label { font-size: 0.72rem; color: var(--text-muted); margin-top: 4px; display: block; }
+
 @media (max-width: 768px) {
-  .porto-grid { grid-template-columns: 1fr; }
-  .paket-inner { grid-template-columns: 1fr; gap: 32px; }
-  .paket-inner.reverse { direction: ltr; }
+  .hero-wrap { grid-template-columns: 1fr; gap: 32px; padding: 100px 24px 48px; min-height: auto; }
+  .hero-left { order: 2; }
+  .hero-right { order: 1; }
+  .hero-right .hero-title { font-size: 2.2rem; }
+  .stat-box { min-width: 80px; padding: 12px 16px; }
+}
+
+/* ── PORTO KLIEN ── */
+.porto-klien {
+  background: #1a3a8f;
+  padding: 48px 0;
+}
+.porto-klien-grid {
+  display: grid;
+  grid-template-columns: 160px repeat(3, 1fr);
+  gap: 0;
+  row-gap: 32px;
+}
+.porto-klien-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.klien-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border-left: 1px solid rgba(255,255,255,0.1);
+}
+.klien-logo img {
+  height: 44px;
+  width: auto;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+  filter: brightness(0) invert(1);
+}
+.klien-logo img:hover { opacity: 1; }
+@media (max-width: 768px) {
+  .porto-klien-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .porto-klien-title { grid-column: 1 / -1; justify-content: center; }
+  .klien-logo { border-left: none; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; }
+}
+
+/* ── PAKET INSTALASI ── */
+.paket-instalasi { background: #f8fafc; padding: 80px 0; }
+.paket-instalasi-title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 40px;
+  letter-spacing: -0.5px;
+}
+.paket-instalasi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.pi-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.pi-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(0,0,0,0.18); }
+.pi-card img { width: 100%; display: block; aspect-ratio: 4/3; object-fit: cover; }
+.pi-cta { text-align: center; }
+.btn-wa-chat {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #25d366;
+  color: white;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  box-shadow: 0 8px 30px rgba(37,211,102,0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-wa-chat:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(37,211,102,0.5); }
+
+@media (max-width: 768px) {
+  .paket-instalasi-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+}
+@media (max-width: 480px) {
+  .paket-instalasi-grid { grid-template-columns: 1fr; }
 }
